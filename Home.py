@@ -114,6 +114,26 @@ if not st.session_state.get("authentication_status"):
 # Perform login — updates session state authentication_status
 authenticator.login(location="main")
 
+# Public user access
+if not st.session_state.get("authentication_status"):
+    st.divider()
+
+    st.markdown(
+        """
+        <div style="text-align:center;">
+            <h3>🌍 Public Access</h3>
+            <p>
+                Have you seen a missing person or want to submit information?
+                You can continue without an officer account.
+            </p>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    if st.button("🌍 Continue as Public User", width="stretch"):
+        st.switch_page("pages/6_Public Submission.py")
+
 # ── Post-login dashboard ──────────────────────────────────────────────────────
 if st.session_state.get("authentication_status"):
     authenticator.logout("Logout", "sidebar")
