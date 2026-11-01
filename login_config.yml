@@ -1,0 +1,14 @@
+credentials:
+  usernames:
+    admin:
+      name: Jayanti
+      email: Jayanti@example.com
+      city: Delhi
+      area: Sector 1
+      role: Admin
+      password: "$2b$12$NVUsUjThggcvjoIGcYWui.Onc.3UJqAw9TuFCkJv/L.J1wVYRMaeC"
+
+cookie:
+  name: mpis_cookie
+  key: "some_random_secret_key_12345"
+  expiry_days: 30
